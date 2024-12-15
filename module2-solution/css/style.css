@@ -1,0 +1,63 @@
+
+h1 {
+    text-align: center;
+}
+
+body {
+    padding: 15px;
+}
+
+.index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.index div {
+    border: 1px solid black;
+    background-color: grey;
+}
+
+.title {
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.title.red {
+    background-color: maroon;
+}
+
+.title.green {
+    background-color: rebeccapurple;
+}
+
+.title.yellow {
+    background-color: rgb(255, 255, 112);
+}
+
+ p {
+    position: relative;
+    top: 5px;
+    display: block;
+    clear: both;
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    .index {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .index div:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 767px) {
+    .index {
+        grid-template-columns: 1fr;
+    }
+}
